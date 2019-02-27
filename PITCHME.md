@@ -25,17 +25,21 @@
 
 ---
 
-### サブスクリプション準備
+## サブスクリプション準備
 
 - Azureでのサブスクリプションの作成
 - AzureStackでのサブスクリプションの作成
 
-#### 仮想マシン展開 - ブラウザ
+---
+
+## 仮想マシン展開 - ブラウザ
 
 - AzureへのLinux仮想マシンの展開
 - AzureStackへのLinux仮想マシンの展開
 
-#### 仮想マシン展開 - PowerShell, CLI
+---
+
+## 仮想マシン展開 - PowerShell, CLI
 
 - Azureへの仮想マシンの展開 - PowerShell
 - AzureStackへの仮想マシンの展開 - PowerShell
@@ -43,14 +47,20 @@
 - AzureStackへの仮想マシンの展開 - CLI
 - Azure CloudShell
 
-#### テンプレート
+---
+
+## テンプレート
 
 - 展開済みリソースのARMテンプレート確認
 - (ARMテンプレート)Azure Quick Start Templateからの展開 - ブラウザ
 - (ARMテンプレート)Azure Stack Quick Start Templateからの展開 - ブラウザ
 - (Terraform)Terraformでの展開
 
-#### コンテナ
+---
+
+## コンテナ
+
+これから下記の操作を行います。
 
 - コンテナでHello World
 - コンテナでwhalesay
@@ -58,22 +68,12 @@
 - Docker Hubにアップロード
 - Wordpressの実行
 
-#### PaaS
+---
 
-- AzureへのWebサイトの作成
-- AzureStackへのへのWebサイトの作成
-- SQL Databaseの作成
-- Wordpressサイトの作成
+## コンテナでHello World
 
-#### Serverless
-
-- FunctionsでTeamsにメッセージを送信
-
-## AzureStackオペレーターとしての体験
-
-## Container
-
-- Ubuntu Server 18.04 LTSを展開
+- Ubuntu Server 18.04 LTSをAzureに展開
+- Ubuntuにsshでアクセス
 - sudo apt install docker.io
 - sudo docker container run hello-world
 - sudo docker images
@@ -139,4 +139,27 @@ services:
 - sudo docker-compose stop
 - sudo docker-compose down
 - sudo docker-compose ps
+
+
+
+## PaaS
+
+- AzureへのWebサイトの作成
+- AzureStackへのへのWebサイトの作成
+- SQL Databaseの作成
+- Wordpressサイトの作成
+
+---
+
+## Serverless
+
+- FunctionsでTeamsにメッセージを送信
+
+---
+
+## AzureStackオペレーターとしての体験
+
+Azure StackにはAzureにはない特徴としてAzure Stackオペレーター用の管理ポータルがありオペレーション業務が行えます。これはAzure Stackがオンプレミスに存在し用途に合わせてカスタマイズできる基盤であるためです。
+
+---
 
