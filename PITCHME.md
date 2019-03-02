@@ -75,6 +75,8 @@
 - az account show
   - 正しいサブスクリプションが設定されていることを確認
 
+---
+
 ## コンテナ検証用VMをAzureに展開
 
 - NAME=*自分の名前*
@@ -158,9 +160,9 @@ CMD /usr/games/fortune -a | cowsay
 ## 作成したイメージのDockerHubへの公開
 
 - sudo docker login
-- sudo docker tag mywhale ebibibi/mywhale
+- sudo docker tag mywhale *自分のアカウント名*/mywhale
 - sudo docker images
-- sudo docker push ebibibi/mywhale
+- sudo docker push *自分のアカウント名*/mywhale
 
 ---
 
@@ -228,6 +230,8 @@ services:
 
 - ファイル保存～終了(Ctrl-x,s -> Ctrl-x,c)
 
+---
+
 ## docker-composeによるイメージ取得
 
 - sudo docker-compose pull
@@ -255,10 +259,14 @@ services:
 - exit
 - az network nsg rule create -g ${NAME}ContainerTest --nsg-name ContainerTestVMNSG  --name AllowHTTP--destination-address-prefix '*' --destination-port-ranges 80 --protocol TCP --priority 2000
 
+---
+
 ## Wordpressの表示
 
 - ブラウザで仮想マシンが保持するパブリックIPアドレスにアクセス
 - (az network public-ip list | grep ipAddress)
+
+---
 
 ## docker-composeによるコンテナ停止
 
@@ -281,6 +289,8 @@ services:
 ## リソースグループの削除
 
 - az group delete --name ${NAME}ContainerTest -y
+
+---
 
 ## PaaS
 
